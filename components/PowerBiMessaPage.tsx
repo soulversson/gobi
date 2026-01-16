@@ -21,7 +21,7 @@ const PowerBiMessaPage: React.FC = () => {
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">Power BI Messa</h1>
                 <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-                    Power BI Messa er árlegt prógramm sem byggir upp Power BI menningu innan fyrirtækis með markvissri fræðslu, miðlægri þekkingarmiðlun og virkri þátttöku starfsfólks.
+                    Power BI Messa er prógramm sem byggir upp Power BI menningu innan fyrirtækis með markvissri fræðslu, miðlægri þekkingarmiðlun og virkri þátttöku starfsfólks.
                 </p>
             </div>
         </div>

@@ -70,10 +70,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget })
   ];
 
   return (
-    <div className="pt-24 pb-12 bg-white min-h-screen">
+    <div className="pt-24 pb-12 bg-white min-h-screen overflow-x-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-            <h1 className="text-5xl font-bold text-gobi-dark mb-6">Þjónustuframboð Gobi</h1>
+            <h1 className="text-5xl font-bold text-gobi-dark mb-6">Þjónusta</h1>
             <p className="text-xl text-slate-600">
                 Ítarleg yfirferð yfir þær lausnir sem við bjóðum upp á til að styrkja stafræna innviði þína.
             </p>
