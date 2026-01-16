@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gobi - Stafræn Framtíð</title>
+    <!-- We keep Tailwind CDN for simplicity, though a build process is usually better for production -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              gobi: {
+                primary: '#FF7E67',    /* The Coral/Orange from the logo arc */
+                secondary: '#EAC47F',  /* The Sand/Gold from the dune */
+                dark: '#0B1120',       /* Deep Navy/Black from the text */
+                light: '#FFF8F4',      /* Very light warm white for backgrounds */
+                accent: '#F97316',     /* Tailwind Orange-500 for hover states */
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for chat */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gobi-light text-gobi-dark antialiased">
+    <div id="root"></div>
+    <!-- Point to the local TypeScript entry file -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
