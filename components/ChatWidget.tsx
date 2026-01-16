@@ -116,12 +116,12 @@ const ChatWidget: React.FC = () => {
                   {msg.role === 'model' ? (
                     <ReactMarkdown
                         components={{
-                            strong: ({node, ...props}) => <span className="font-bold" {...props} />,
-                            p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
-                            ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-2" {...props} />,
-                            ol: ({node, ...props}) => <ol className="list-decimal ml-4 mb-2" {...props} />,
-                            li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                            a: ({node, ...props}) => <a className="underline text-gobi-primary hover:text-gobi-accent" target="_blank" rel="noopener noreferrer" {...props} />
+                            strong: ({node, ...props}: any) => <span className="font-bold" {...props} />,
+                            p: ({node, ...props}: any) => <p className="mb-2 last:mb-0" {...props} />,
+                            ul: ({node, ...props}: any) => <ul className="list-disc ml-4 mb-2" {...props} />,
+                            ol: ({node, ...props}: any) => <ol className="list-decimal ml-4 mb-2" {...props} />,
+                            li: ({node, ...props}: any) => <li className="mb-1" {...props} />,
+                            a: ({node, ...props}: any) => <a className="underline text-gobi-primary hover:text-gobi-accent" target="_blank" rel="noopener noreferrer" {...props} />
                         }}
                     >
                         {msg.text}
