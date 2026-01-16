@@ -18,7 +18,7 @@ export const getChatSession = (): Chat => {
   if (!chatSession) {
     const client = getAiClient();
     chatSession = client.chats.create({
-      model: 'gemini-2.0-flash', // Updated to a stable model name
+      model: 'gemini-3-flash-preview',
       config: {
         systemInstruction: `
           Þú ert Gobi AI, gervigreindaraðstoðarmaður fyrir fyrirtækið Gobi með mikinn áhuga á kaffi.
