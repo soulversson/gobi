@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { Message } from '../types';
 import { sendMessageStream } from '../services/gemini';
 
@@ -106,13 +107,28 @@ const ChatWidget: React.FC = () => {
                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                  className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                     msg.role === 'user'
                       ? 'bg-gobi-primary text-white rounded-br-none'
                       : 'bg-white text-gobi-dark shadow-sm border border-slate-100 rounded-bl-none'
                   }`}
                 >
-                  {msg.text}
+                  {msg.role === 'model' ? (
+                    <ReactMarkdown
+                        components={{
+                            strong: ({node, ...props}) => <span className="font-bold" {...props} />,
+                            p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                            ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-2" {...props} />,
+                            ol: ({node, ...props}) => <ol className="list-decimal ml-4 mb-2" {...props} />,
+                            li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                            a: ({node, ...props}) => <a className="underline text-gobi-primary hover:text-gobi-accent" target="_blank" rel="noopener noreferrer" {...props} />
+                        }}
+                    >
+                        {msg.text}
+                    </ReactMarkdown>
+                  ) : (
+                    msg.text
+                  )}
                 </div>
               </div>
             ))}
