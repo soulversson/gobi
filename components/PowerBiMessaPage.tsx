@@ -52,6 +52,7 @@ const PowerBiMessaPage: React.FC = () => {
       subtitle: "Þekking og virk notkun",
       description: "Fyrir fyrirtæki sem nota Power BI reglulega og vilja efla gæði og samvinnu.",
       duration: "6 mánuðir",
+      isPro: true,
       highlights: [
         "Allt innifalið í Pakka 1",
         "Virkjun Power BI samráðsvettvangs",
@@ -79,7 +80,6 @@ const PowerBiMessaPage: React.FC = () => {
       subtitle: "Þroski og sjálfbærni",
       description: "Fyrir fyrirtæki þar sem Power BI er orðið lykilkerfi og ákvarðanir byggja á gögnum.",
       duration: "12 mánuðir",
-      isPro: true,
       highlights: [
         "Allt innifalið í Pakka 2",
         "Power BI rekstraryfirsýn (API)",
@@ -272,14 +272,6 @@ const PowerBiMessaPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gobi-dark mb-10 text-center">Af hverju árlegt prógramm?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                    <h4 className="font-bold text-red-500 mb-4 text-xl">Power BI Messa er EKKI:</h4>
-                    <ul className="space-y-4">
-                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Einstakur fyrirlestur</li>
-                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Styttra námskeið</li>
-                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Tilviljanakenndar ráðgjafastundir</li>
-                    </ul>
-                </div>
-                <div>
                     <h4 className="font-bold text-green-600 mb-4 text-xl">Power BI Messa ER:</h4>
                     <ul className="space-y-4">
                         <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Stöðug uppbygging yfir heilt ár</li>
@@ -288,12 +280,20 @@ const PowerBiMessaPage: React.FC = () => {
                         <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Skalanleg lausn sem þróast með fyrirtækinu</li>
                     </ul>
                 </div>
+                <div>
+                    <h4 className="font-bold text-red-500 mb-4 text-xl">Power BI Messa er EKKI:</h4>
+                    <ul className="space-y-4">
+                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Einstakur fyrirlestur</li>
+                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Styttra námskeið</li>
+                        <li className="flex items-center opacity-70"><XIcon className="mr-3" /> Tilviljanakenndar ráðgjafastundir</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         {/* Benefits */}
         <div className="text-center bg-gobi-secondary/20 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold text-gobi-dark mb-8">Fyrirtækið Fær:</h2>
+            <h2 className="text-3xl font-bold text-gobi-dark mb-8">Fyrirtækið fær:</h2>
             <div className="flex flex-wrap justify-center gap-4">
                 {['Skýrari vinnubrögð', 'Betri skýrslugæði', 'Minni tvíverknað', 'Sterkara Power BI samfélag', 'Meiri arðsemi af Power BI'].map((tag, i) => (
                     <span key={i} className="bg-white text-gobi-dark font-bold px-6 py-3 rounded-full shadow-sm border border-white/50">
