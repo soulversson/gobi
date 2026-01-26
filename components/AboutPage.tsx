@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Tractor, Coffee, pocketKnife , Crown, Mail } from 'lucide-react';
+import { Tractor, Coffee, PocketKnife , Crown, Mail } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
       email: "bjorn@gobi.is",
       description: "Björn er svissneski vasahnífurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
-      icon: pocketKnife
+      icon: PocketKnife
     },
     {
       name: "Guðmundur Jósepsson",
