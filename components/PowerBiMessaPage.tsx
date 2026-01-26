@@ -293,7 +293,7 @@ const PowerBiMessaPage: React.FC = () => {
 
         {/* Benefits */}
         <div className="text-center bg-gobi-secondary/20 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold text-gobi-dark mb-8">Fyrirtækið fær:</h2>
+            <h2 className="text-3xl font-bold text-gobi-dark mb-8">Þú færð:</h2>
             <div className="flex flex-wrap justify-center gap-4">
                 {['Skýrari vinnubrögð', 'Betri skýrslugæði', 'Minni tvíverknað', 'Sterkara Power BI samfélag', 'Meiri arðsemi af Power BI'].map((tag, i) => (
                     <span key={i} className="bg-white text-gobi-dark font-bold px-6 py-3 rounded-full shadow-sm border border-white/50">
