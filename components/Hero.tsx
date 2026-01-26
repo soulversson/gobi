@@ -22,20 +22,20 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                 Við hjálpum þér að að  <br/> breyta gögnum í verðmæti.
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto font-medium drop-shadow-md leading-relaxed">
-                Sérfræðingar í vöruhúsum gagna, stefnumótun og sérsmíðuðum lausnum sem virka.
+                Sérfræðingar í vöruhúsum gagna, stefnumótun og sérsmíðuðum lausnum sem virka
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <button 
                   onClick={() => scrollToSection(SectionId.CONTACT)}
                   className="bg-gobi-primary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl flex items-center border border-transparent"
                 >
-                  Hafa Samband <ArrowRight className="ml-2 h-5 w-5" />
+                  Hafa samband <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
                 <button 
                   onClick={() => scrollToSection(SectionId.SERVICES)}
                   className="bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-gobi-primary transition-colors"
                 >
-                  Skoða Þjónustu
+                  Skoða þjónustu
                 </button>
               </div>
             </div>
