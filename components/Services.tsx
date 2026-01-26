@@ -56,7 +56,7 @@ const Services: React.FC<ServicesProps> = ({ navigateTo }) => {
     <section id={SectionId.SERVICES} className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gobi-dark mb-4">Okkar Þjónusta</h2>
+          <h2 className="text-4xl font-bold text-gobi-dark mb-4">Þjónusta</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Heildarlausnir í gögnum, hugbúnaði og stjórnun.
           </p>

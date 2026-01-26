@@ -19,10 +19,10 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
           <div className="w-full lg:w-9/12 px-4 ml-auto mr-auto text-center">
             <div className="">
               <h1 className="text-white font-bold text-5xl md:text-7xl tracking-tight mb-6 animate-fade-in-up drop-shadow-lg">
-                Gerum flókin gögn <br/> að skýrri sýn
+                Við hjálpum þér að að  <br/> breyta gögnum í verðmæti.
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto font-medium drop-shadow-md leading-relaxed">
-                Við hjálpum fyrirtækjum að beisla kraft gagnanna sinna og breyta þeim í verðmætar upplýsingar. Sérfræðingar í vöruhúsum gagna, stefnumótun og sérsmíðuðum lausnum sem virka.
+                Sérfræðingar í vöruhúsum gagna, stefnumótun og sérsmíðuðum lausnum sem virka.
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <button 

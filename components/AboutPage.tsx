@@ -27,12 +27,12 @@ const AboutPage: React.FC = () => {
       name: "Björn Guðmundsson",
       role: "Hugbúnaður",
       email: "bjorn@gobi.is",
-      description: "Björn er svissneski nákvæmnismaðurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
+      description: "Björn er svissneski vasahnífurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
       icon: Gavel
     },
     {
-      name: "Guðmundur B. Jósepsson",
+      name: "Guðmundur Jósepsson",
       role: "Framkvæmdastjóri",
       email: "gj@gobi.is",
       description: "Gummi er framkvæmdastjóri og leiðtogi hópsins. Hann er margreyndur stjórnandi sem leysir flókin mál af yfirvegun, oftast með kaffibolla í hendi. Hann sér til þess að stefnan sé rétt og að teymið hafi allt til alls til að skila framúrskarandi árangri.",
