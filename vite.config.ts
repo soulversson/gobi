@@ -4,10 +4,10 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
-  const env = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, '.', '');
 
   return {
-    // This makes paths relative, which is required for GitHub Pages
+    // Relative base allows the app to be deployed to any subpath
     base: './', 
     plugins: [react()],
     define: {

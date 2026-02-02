@@ -1,12 +1,9 @@
 import React from 'react';
-import { SectionId, ViewState } from '../types';
+import { Link } from 'react-router-dom';
+import { SectionId } from '../types';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
-interface AboutProps {
-  navigateTo: (view: ViewState, target?: string) => void;
-}
-
-const About: React.FC<AboutProps> = ({ navigateTo }) => {
+const About: React.FC = () => {
   return (
     <section id={SectionId.ABOUT} className="py-24 bg-gobi-light overflow-hidden">
       <div className="container mx-auto px-4">
@@ -54,12 +51,12 @@ const About: React.FC<AboutProps> = ({ navigateTo }) => {
               </div>
             </div>
 
-            <button 
-                onClick={() => navigateTo('ABOUT_PAGE')}
+            <Link 
+                to="/umokkur"
                 className="inline-flex items-center text-white bg-gobi-dark hover:bg-gobi-primary font-bold py-3 px-6 rounded-lg transition-colors"
             >
                 Sjá nánar um teymið <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

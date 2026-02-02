@@ -1,26 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Database, BarChart3, Code2, Container, Compass, Check } from 'lucide-react';
-import { ViewState } from '../types';
 
-interface ServicesPageProps {
-  navigateTo: (view: ViewState) => void;
-  scrollTarget?: string;
-}
-
-const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget }) => {
-  useEffect(() => {
-    if (scrollTarget) {
-        setTimeout(() => {
-            const element = document.getElementById(scrollTarget);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 100);
-    } else {
-        window.scrollTo(0, 0);
-    }
-  }, [scrollTarget]);
-
+const ServicesPage: React.FC = () => {
   const detailedServices = [
     {
       id: "data-warehouse",
@@ -29,10 +11,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget })
       content: (
         <>
           <p className="mb-4">
-            Það er algengur misskilningur að það sé nóg að gögn séu til í bókhalds- eða sölukerfum. Þessi kerfi eru hönnuð til að taka við færslum, ekki til að svara flóknum greiningum. Þegar Power BI sækir gögn beint úr mörgum kerfum og reynir að púsla þeim saman í rauntíma verður til flöskuháls. Vöruhús gagna leysir þetta með því að forvinna og auðga gögnin, sem tryggir að skýrslur opnast hratt og allir stjórnendur horfa á sömu samræmdu mælikvörðunum.
+            Það er algengur misskilningur að það sé nóg að gögn séu til í bókhalds- eða sölukerfum. Þessi kerfi eru hönnuð til að taka við færslum, ekki til að svara flóknum greiningum. Þegar gögnum er púslað úr mörgum kerfum beint í skýrslukerfi verður til flöskuháls á hraða og gæðum. Vöruhús gagna leysir þetta með því að forvinna og auðga gögnin, sem tryggir að skýrslur opnast hratt og allir stjórnendur horfa á sömu samræmdu mælikvörðunum.
           </p>
           <p>
-            Vöruhús gagna eykur hagræði verulega með því að draga úr handvirkri vinnu og sjálfvirknivæða gagnaöflun, sem nýtir tíma starfsfólks betur í verðmætasköpun. Þetta er ekki aðeins lausn á núverandi vanda, heldur nauðsynleg fjárfesting í stafrænni framtíð fyrirtækisins. Það myndar grunninn að sjálfvirkni og hagnýtingu nýrrar tækni á borð við gervigreind, sem er ómögulegt að innleiða án góðra gagna.
+            Vöruhús gagna eykur hagræði verulega með því að draga úr handvirkri vinnu og sjálfvirknivæða gagnaöflun, sem nýtir tíma starfsfólks betur í verðmætasköpun. Þetta er ekki aðeins lausn á núverandi vanda, heldur nauðsynleg fjárfesting í stafrænni framtíð fyrirtækja. Það myndar grunninn að sjálfvirkni og hagnýtingu nýrrar tækni á borð við gervigreind, sem er ómögulegt að innleiða án góðra gagna.
           </p>
         </>
       ),
@@ -42,7 +24,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget })
       id: "reporting",
       title: "Skýrslugerð & Greining",
       icon: BarChart3,
-      content: "Við gerum gögn lifandi. Með Power BI smíðum við gagnvirkar mælaborðslausnir sem veita stjórnendum og starfsmönnum innsýn í reksturinn í rauntíma. Við leggjum áherslu á sjálfsafgreiðslu (Self-Service BI) og hönnum skýrslur sem eru ekki bara fallegar, heldur svara lykilspurningum rekstrarins.",
+      content: "Við gerum gögn lifandi. Með Power BI smíðum við gagnvirkar mælaborðslausnir sem veita stjórnendum og starfsmönnum innsýn í reksturinn í rauntíma. Við hönnum skýrslur sem eru ekki bara fallegar, heldur svara lykilspurningum rekstrarins.",
       tech: ["Power BI", "DAX", "Data Visualization", "Self-Service BI", "Governance"],
       linkToMessa: true
     },
@@ -50,22 +32,22 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget })
       id: "software",
       title: "Hugbúnaðargerð",
       icon: Code2,
-      content: "Sérsmíðaður hugbúnaður sem leysir sértæk vandamál. Hvort sem um er að ræða veflausnir, bakenda vinnslu eða samþættingar (API), þá notum við nýjustu tækni til að skila öflugum og viðhaldsvænum lausnum.",
+      content: "Sérsmíðaður hugbúnaður sem leysir sértæk vandamál. Hvort sem um er að ræða veflausnir, bakenda vinnslu eða samþættingar, þá notum við nýjustu tækni til að skila öflugum og viðhaldsvænum lausnum.",
       tech: ["Full-stack þróun", "API hönnun", "Örþjónustur (Microservices)", "React / Node.js"]
     },
     {
       id: "cicd",
-      title: "CI/CD & Sjálfvirkni (DevOps)",
+      title: "CI/CD & DevOps",
       icon: Container,
-      content: "Við tryggjum hraða og öryggi í hugbúnaðarþróun með CI/CD (Continuous Integration / Continuous Deployment). Við setjum upp gáma-umhverfi (Containerization) með Docker og stýrum rekstri með Kubernetes, sem tryggir að kerfin þín séu alltaf uppi og auðvelt sé að uppfæra þau.",
+      content: "Við tryggjum hraða og öryggi í hugbúnaðarþróun með CI/CD. Við setjum upp Containers með Docker og stýrum rekstri með Kubernetes, sem tryggir að kerfin þín séu alltaf uppi og auðvelt sé að uppfæra þau.",
       tech: ["Docker", "Kubernetes", "GitHub Actions", "Azure DevOps", "Infrastructure as Code"]
     },
     {
       id: "management-analysis",
-      title: "Stjórnun & Greining (Management & FinOps)",
+      title: "Stjórnun & Greiningar",
       icon: Compass,
-      content: "Við sameinum faglega verkefnastjórnun og ítarlegar kostnaðargreiningar. Við beitum viðurkenndum aðferðafræðum (Agile/Scrum) til að stýra tækniverkefnum árangursríkt. Samhliða því greinum við rekstrarkostnað tækniumhverfis (FinOps), finnum óhagkvæmni í skýjaumhverfi og hjálpum fyrirtækjum að hámarka virði fjárfestinga sinna.",
-      tech: ["Agile/Scrum", "Jira", "FinOps", "Cloud Cost Optimization", "ROI Útreikningar"]
+      content: "Við sameinum faglega verkefnastjórnun og ítarlegar kostnaðargreiningar. Við beitum viðurkenndum aðferðafræðum til að stýra verkefnum árangursríkt. Samhliða því greinum við umbætur á rekstrarkostnað, finnum óhagkvæmni í skýjaumhverfum og hjálpum fyrirtækjum að hámarka virði fjárfestinga sinna.",
+      tech: ["Project Management", "Agile/Scrum", "FinOps", "Cloud Cost Optimization", "ROI Útreikningar"]
     }
   ];
 
@@ -88,12 +70,12 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ navigateTo, scrollTarget })
                         </div>
                         <h2 className="text-3xl font-bold text-gobi-dark mb-4">{item.title}</h2>
                         {item.linkToMessa && (
-                            <button 
-                                onClick={() => navigateTo('POWER_BI_MESSA')}
+                            <Link 
+                                to="/powerbimessa"
                                 className="text-gobi-primary font-bold hover:underline"
                             >
                                 Kynntu þér Power BI Messuna &rarr;
-                            </button>
+                            </Link>
                         )}
                     </div>
                     <div className="w-full md:w-2/3">

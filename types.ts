@@ -19,5 +19,3 @@ export enum SectionId {
   ABOUT = 'about',
   CONTACT = 'contact'
 }
-
-export type ViewState = 'HOME' | 'SERVICES_DETAIL' | 'POWER_BI_MESSA' | 'ABOUT_PAGE';

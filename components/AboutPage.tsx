@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Tractor, Coffee, PocketKnife , Crown, Mail } from 'lucide-react';
+import { Tractor, Hammer, PocketKnife, Crown, Mail } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -9,31 +9,31 @@ const AboutPage: React.FC = () => {
   const team = [
     {
       name: "Bjarni Salvarsson",
-      role: "Gögn",
+      role: "Gögn og grunnar",
       email: "bjarni@gobi.is",
-      description: "Bjarni er gagnabóndinn okkar frá Vigur. Hann hefur skipt út traktorum fyrir tölvuský og nýtir nú eljusemi bóndans við uppbyggingu vöruhúsa gagna. Hann plægir í gegnum flækjur og sáir fræjum sjálfvirkni svo uppskeran verði sem best.",
+      description: "Bjarni er gagnabóndinn okkar. Hann hefur skipt út traktorum fyrir tölvuský og nýtir nú eljusemi bóndans við uppbyggingu vöruhúsa gagna. Hann plægir í gegnum flækjur og sáir fræjum sjálfvirkni svo uppskeran verði sem best.",
       image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop",
       icon: Tractor
     },
     {
       name: "Birgir Þór Svavarsson",
-      role: "Skýrslur",
+      role: "Gögn og skýrslur",
       email: "birgir@gobi.is",
-      description: "Birgir er smiður að mennt sem smíðar nú stafrænar lausnir. Hann veit að sterkir innviðir eru forsenda glæsilegrar útkomu. Hann trúir því að góður vinnudagur byrji á rjúkandi kaffibolla og endi á skotheldri skýrslu sem stendur undir væntingum.",
+      description: "Birgir er smiður að mennt sem smíðar nú glæsilegar skýrslur. Hann veit að sterkir innviðir eru forsenda glæsilegrar útkomu. Hann trúir því að góður vinnudagur byrji á rjúkandi kaffibolla og endi á skotheldri skýrslu",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-      icon: Coffee
+      icon: Hammer
     },
     {
       name: "Björn Guðmundsson",
-      role: "Hugbúnaður",
+      role: "Hugbúnaður og sjáfvirknivæðing",
       email: "bjorn@gobi.is",
-      description: "Björn er svissneski vasahnífurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
+      description: "Björn er svissneski nákvæmnismaðurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
       icon: PocketKnife
     },
     {
       name: "Guðmundur Jósepsson",
-      role: "Framkvæmdastjóri",
+      role: "Framkvæmdastjóri og kaffibarista",
       email: "gj@gobi.is",
       description: "Gummi er framkvæmdastjóri og leiðtogi hópsins. Hann er margreyndur stjórnandi sem leysir flókin mál af yfirvegun, oftast með kaffibolla í hendi. Hann sér til þess að stefnan sé rétt og að teymið hafi allt til alls til að skila framúrskarandi árangri.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
@@ -57,8 +57,8 @@ const AboutPage: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 py-24">
-        {/* Changed grid to 2 columns (md:grid-cols-2) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 max-w-7xl mx-auto">
+        {/* Changed grid to 2 columns only on large screens (lg:grid-cols-2) to give more room on tablets */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-12 max-w-6xl mx-auto">
             {team.map((member, index) => (
                 <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start gap-8 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                     

@@ -1,4 +1,5 @@
 {
   "name": "Gobi.is - Íslenska",
-  "description": "Nútímaleg og aðlaganleg viðskiptavefsíða fyrir Gobi, fullþýdd á íslensku með innbyggðum gervigreindaraðstoðarmanni."
+  "description": "Nútímaleg og aðlaganleg viðskiptavefsíða fyrir Gobi, fullþýdd á íslensku með innbyggðum gervigreindaraðstoðarmanni.",
+  "requestFramePermissions": []
 }

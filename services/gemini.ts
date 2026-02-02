@@ -34,7 +34,7 @@ Gobi sérhæfir sig í að breyta flóknum gögnum í verðmætar upplýsingar. 
 - Bjarni Salvarsson (Hlutverk: Gögn): Sérfræðingur í vöruhúsum gagna og sjálfvirkni.
 - Birgir Þór Svavarsson (Hlutverk: Skýrslur): Sérhæfir sig í Power BI og framsetningu gagna.
 - Björn Guðmundsson (Hlutverk: Hugbúnaður): Sérfræðingur í bakenda og kerfjasamþættingum.
-- Guðmundur Jósepsson (Hlutverk: Framkvæmdastjóri): Leiðtogi hópsins, sér um stefnumótun og að drekka kaffi.
+- Guðmundur B. Jósepsson (Hlutverk: Framkvæmdastjóri): Leiðtogi hópsins, sér um stefnumótun og að hella upp á kaffi.
 
 **Samskipti:**
 - Ef þú veist ekki svarið, bentu notandanum á netfangið gobi@gobi.is eða síma 555-1234.

@@ -1,54 +1,53 @@
 import React from 'react';
 import { Code2, Database, BarChart3, Container, Users, Compass, ArrowRight } from 'lucide-react';
-import { SectionId, ViewState } from '../types';
+import { useNavigate } from 'react-router-dom';
+import { SectionId } from '../types';
 
-interface ServicesProps {
-    navigateTo: (view: ViewState, target?: string) => void;
-}
+const Services: React.FC = () => {
+  const navigate = useNavigate();
 
-const Services: React.FC<ServicesProps> = ({ navigateTo }) => {
   const services = [
     {
       title: "Vöruhús Gagna",
       description: "Databricks, Fabric og dbt lausnir fyrir nútíma gagnanotkun.",
       icon: Database,
       id: "data-warehouse",
-      view: 'SERVICES_DETAIL' as ViewState
+      link: "/thjonusta#data-warehouse"
     },
     {
       title: "Skýrslugerð",
       description: "Lifandi mælaborð og framsetning gagna í Power BI.",
       icon: BarChart3,
       id: "reporting",
-      view: 'SERVICES_DETAIL' as ViewState
+      link: "/thjonusta#reporting"
     },
     {
       title: "Power BI Messa",
       description: "Menningarprógramm sem eflir gagnaþekkingu alls fyrirtækisins.",
       icon: Users,
       id: "messa",
-      view: 'POWER_BI_MESSA' as ViewState
+      link: "/powerbimessa"
     },
     {
       title: "Hugbúnaðargerð",
       description: "Sérsmíðaðar lausnir sem mæta þínum þörfum.",
       icon: Code2,
       id: "software",
-      view: 'SERVICES_DETAIL' as ViewState
+      link: "/thjonusta#software"
     },
     {
       title: "CI/CD & Innleiðing",
       description: "Sjálfvirkni í rekstri með Docker og Kubernetes.",
       icon: Container,
       id: "cicd",
-      view: 'SERVICES_DETAIL' as ViewState
+      link: "/thjonusta#cicd"
     },
     {
       title: "Stjórnun & Greining",
       description: "Fagleg verkefnastjórnun og kostnaðargreiningar (FinOps).",
       icon: Compass,
       id: "management-analysis",
-      view: 'SERVICES_DETAIL' as ViewState
+      link: "/thjonusta#management-analysis"
     },
   ];
 
@@ -56,7 +55,7 @@ const Services: React.FC<ServicesProps> = ({ navigateTo }) => {
     <section id={SectionId.SERVICES} className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gobi-dark mb-4">Þjónusta</h2>
+          <h2 className="text-4xl font-bold text-gobi-dark mb-4">Okkar Þjónusta</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Heildarlausnir í gögnum, hugbúnaði og stjórnun.
           </p>
@@ -66,7 +65,7 @@ const Services: React.FC<ServicesProps> = ({ navigateTo }) => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              onClick={() => navigateTo(service.view, service.view === 'SERVICES_DETAIL' ? service.id : undefined)}
+              onClick={() => navigate(service.link)}
               className="p-8 bg-gobi-light rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-gobi-secondary/20 group cursor-pointer"
             >
               <div className="w-14 h-14 bg-orange-50 text-gobi-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-gobi-primary group-hover:text-white transition-colors">
@@ -84,7 +83,7 @@ const Services: React.FC<ServicesProps> = ({ navigateTo }) => {
 
         <div className="text-center">
             <button 
-                onClick={() => navigateTo('SERVICES_DETAIL')}
+                onClick={() => navigate('/thjonusta')}
                 className="inline-flex items-center text-gobi-primary font-bold text-lg hover:text-gobi-dark transition-colors"
             >
                 Lesa nánar um þjónustu <ArrowRight className="ml-2 h-5 w-5" />
