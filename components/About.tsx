@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../types';
 import { SectionId } from '../types';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
@@ -55,7 +55,7 @@ const About: React.FC = () => {
                 to="/umokkur"
                 className="inline-flex items-center text-white bg-gobi-dark hover:bg-gobi-primary font-bold py-3 px-6 rounded-lg transition-colors"
             >
-                Sjá nánar um teymið <ArrowRight className="ml-2 h-5 w-5" />
+                Teymið <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart3, Users, Calendar, BookOpen, CheckCircle, ArrowRight, ChevronDown, ChevronUp, Star } from 'lucide-react';
+import { BarChart3, CheckCircle, ArrowRight, Star, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from '../types';
 
 const PowerBiMessaPage: React.FC = () => {
   useEffect(() => {
@@ -31,19 +32,19 @@ const PowerBiMessaPage: React.FC = () => {
       details: [
         {
           head: "Mánaðarleg Power BI Messa",
-          items: ["Haldið á Teams, einu sinni í mánuði", "Hagnýt fræðsla byggð á raunverulegum verkefnum", "Áhersla á gagnalíkön, measures og bestu lausnir"]
+          items: ["Haldið á Teams, einu sinni í mánuði", "Hagnýt fræðsla byggð á raunverulegum verkefnum", "Áhersla á uppsettningu umhverfis, aðgangstýringu og vinnusvæðum"]
         },
         {
           head: "Power BI skýrslusniðmát",
-          items: ["3 tillögur að uppbyggingu skýrslu", "Gervigögn til prófunar og lærdóms", "Skýrt flæði og lesanleiki"]
+          items: ["3 tillögur að uppbyggingum á skýrslum", "Gervigögn til prófunar og lærdóms", "Skýrt flæði og lesanleiki"]
         },
         {
           head: "Dynamic Data Catalog",
-          items: ["Lýsir innihaldi gagnalíkans", "Sýnir töflur, dálka og mælingar", "Fyrir notendur með eingöngu app-aðgang"]
+          items: ["Lýsir innihaldi gagnalíkans", "Sýnir töflur, dálka og mælikvarða", "Fyrir notendur með eingöngu app-aðgang"]
         },
         {
           head: "SharePoint & Teams",
-          items: ["Innanhúss svæði fyrir best practices", "Algeng mistök og lausnir uppfært mánaðarlega", "Spurningar og lausnir milli Power BI notenda"]
+          items: ["Innanhúss svæði fyrir best practices", "Mánaðarlegar Greinar um algeng mistök og lausnir", "Spurningar og lausnir milli Power BI notenda"]
         }
       ]
     },
@@ -70,14 +71,14 @@ const PowerBiMessaPage: React.FC = () => {
         },
         {
           head: "Yfirferð á efni",
-          items: ["Yfirferð á einu Power BI skjali/líkani á samningstíma", "Ábendingar um DAX, uppbyggingu og performance"]
+          items: ["Yfirferð á einu Power BI skjali/líkani á samningstíma", "Ábendingar um DAX, uppbyggingu og afköst"]
         }
       ]
     },
     {
       title: "Pakki 3",
       subtitle: "Þroski og sjálfbærni",
-      description: "Fyrir fyrirtæki þar sem Power BI er orðið lykilkerfi og ákvarðanir byggja á gögnum.",
+      description: "Fyrir fyrirtæki þar sem Power BI er orðið lykiltól og ákvarðanir byggja á gögnum.",
       duration: "12 mánuðir",
       isPro: true,
       highlights: [
@@ -115,7 +116,7 @@ const PowerBiMessaPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center">
                 <div className="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 backdrop-blur-sm border border-white/20">
                     <BarChart3 className="text-gobi-secondary h-6 w-6 mr-2" />
-                    <span className="text-white font-medium">12 mánaða menningar- og þekkingarprógramm</span>
+                    <span className="text-white font-medium">6-12 mánaða menningar- og þekkingarprógramm</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">Power BI Messa</h1>
                 <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
@@ -136,7 +137,7 @@ const PowerBiMessaPage: React.FC = () => {
         </div>
 
         {/* Pricing / Packages Section */}
-        <div className="mb-24">
+        <div className="mb-12">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-gobi-dark mb-4">Veldu þinn pakka</h2>
                 <p className="text-slate-600 max-w-2xl mx-auto">Við bjóðum upp á þrjár leiðir til að innleiða Power BI menningu, allt eftir þörfum og þroskastigi fyrirtækisins.</p>
@@ -197,10 +198,11 @@ const PowerBiMessaPage: React.FC = () => {
                             </div>
                         </div>
 
+                        {/* Toggle Button */}
                         <div className="p-8 pt-0 mt-auto">
-                            <button 
+                             <button 
                                 onClick={() => togglePackage(index)}
-                                className="w-full mb-4 flex items-center justify-center text-slate-500 hover:text-gobi-dark text-sm font-medium transition-colors focus:outline-none"
+                                className="w-full mb-0 flex items-center justify-center text-slate-500 hover:text-gobi-dark text-sm font-medium transition-colors focus:outline-none"
                             >
                                 {isExpanded ? (
                                     <>Minna <ChevronUp className="ml-1 w-4 h-4" /></>
@@ -208,68 +210,25 @@ const PowerBiMessaPage: React.FC = () => {
                                     <>Sjá nánar <ChevronDown className="ml-1 w-4 h-4" /></>
                                 )}
                             </button>
-                            
-                            <button className={`w-full py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg
-                                ${pkg.isPro 
-                                    ? 'bg-gobi-primary hover:bg-orange-600 text-white' 
-                                    : 'bg-gobi-dark hover:bg-slate-800 text-white'
-                                }`}>
-                                Velja {pkg.title}
-                            </button>
                         </div>
                     </div>
                   );
                 })}
             </div>
-        </div>
 
-        {/* What is included grid (Existing content condensed slightly or kept as feature breakdown) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
-            <div className="bg-gobi-light p-10 rounded-3xl border border-gobi-secondary/20 relative overflow-hidden group hover:shadow-xl transition-all">
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <Calendar className="w-32 h-32 text-gobi-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-gobi-dark mb-6 flex items-center">
-                    <Calendar className="mr-3 text-gobi-primary" /> Innifalið í öllum pökkum
-                </h3>
-                <ul className="space-y-4 text-slate-700">
-                    <li className="flex items-start">
-                        <div className="h-2 w-2 bg-gobi-secondary rounded-full mt-2 mr-3 shrink-0"></div>
-                        <span><strong>Mánaðarleg Messa:</strong> 60 mín á Teams með hagnýtri fræðslu.</span>
-                    </li>
-                    <li className="flex items-start">
-                        <div className="h-2 w-2 bg-gobi-secondary rounded-full mt-2 mr-3 shrink-0"></div>
-                        <span><strong>Innanhúss kynning:</strong> Raunverulegt notkunardæmi úr fyrirtækinu.</span>
-                    </li>
-                    <li className="flex items-start">
-                        <div className="h-2 w-2 bg-gobi-secondary rounded-full mt-2 mr-3 shrink-0"></div>
-                        <span><strong>Tæknikafli frá Gobi:</strong> Workspace skipulag, nafnavenjur, miðlægt gagnalíkan, RLS, o.fl.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <BookOpen className="w-32 h-32 text-gobi-dark" />
-                </div>
-                <h3 className="text-2xl font-bold text-gobi-dark mb-6 flex items-center">
-                    <BookOpen className="mr-3 text-gobi-primary" /> Dæmi um efni Messa
-                </h3>
-                <p className="text-slate-600 mb-4">Stigskipt fræðsla sem aðlagast þörfum:</p>
-                <div className="grid grid-cols-1 gap-3">
-                    {['Messa fyrir nýja notendur', 'Fyrstu skref í skýrslugerð', 'Framhalds messa', 'Tæknilega afmarkaðar messur (DAX, App arkitektúr)'].map((item, i) => (
-                        <div key={i} className="flex items-center p-3 bg-slate-50 rounded-lg">
-                             <CheckCircle className="h-4 w-4 text-gobi-secondary mr-3" />
-                             <span className="text-slate-700 font-medium">{item}</span>
-                        </div>
-                    ))}
-                </div>
+            <div className="text-center mt-16 mb-24">
+                <Link 
+                    to="/#contact" 
+                    className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-gobi-primary rounded-full shadow-lg hover:bg-orange-600 hover:shadow-xl hover:-translate-y-1"
+                >
+                    Hafa samband og fá tilboð <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
             </div>
         </div>
 
         {/* Why Annual? */}
         <div className="bg-slate-50 rounded-3xl p-12 mb-24">
-            <h2 className="text-3xl font-bold text-gobi-dark mb-10 text-center">Af hverju árlegt prógramm?</h2>
+            <h2 className="text-3xl font-bold text-gobi-dark mb-10 text-center">Hvað er Power BI Messa?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
                     <h4 className="font-bold text-red-500 mb-4 text-xl">Power BI Messa er EKKI:</h4>
@@ -282,7 +241,7 @@ const PowerBiMessaPage: React.FC = () => {
                 <div>
                     <h4 className="font-bold text-green-600 mb-4 text-xl">Power BI Messa ER:</h4>
                     <ul className="space-y-4">
-                        <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Stöðug uppbygging yfir heilt ár</li>
+                        <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Stöðug uppbygging yfir langt tímabil</li>
                         <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Samræming vinnubragða</li>
                         <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Vaxandi hæfni og dýpri skilningur</li>
                         <li className="flex items-center font-medium"><CheckIcon className="mr-3" /> Skalanleg lausn sem þróast með fyrirtækinu</li>

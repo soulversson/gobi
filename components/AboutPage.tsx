@@ -8,27 +8,27 @@ const AboutPage: React.FC = () => {
 
   const team = [
     {
-      name: "Bjarni Salvarsson",
-      role: "Gögn og grunnar",
-      email: "bjarni@gobi.is",
-      description: "Bjarni er gagnabóndinn okkar. Hann hefur skipt út traktorum fyrir tölvuský og nýtir nú eljusemi bóndans við uppbyggingu vöruhúsa gagna. Hann plægir í gegnum flækjur og sáir fræjum sjálfvirkni svo uppskeran verði sem best.",
-      image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop",
-      icon: Tractor
-    },
-    {
       name: "Birgir Þór Svavarsson",
       role: "Gögn og skýrslur",
       email: "birgir@gobi.is",
       description: "Birgir er smiður að mennt sem smíðar nú glæsilegar skýrslur. Hann veit að sterkir innviðir eru forsenda glæsilegrar útkomu. Hann trúir því að góður vinnudagur byrji á rjúkandi kaffibolla og endi á skotheldri skýrslu",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      image: "/images/birgir.jpg",
       icon: Hammer
+    },
+    {
+      name: "Bjarni Salvarsson",
+      role: "Gögn og grunnar",
+      email: "bjarni@gobi.is",
+      description: "Bjarni er gagnabóndinn okkar. Hann hefur skipt út traktorum fyrir tölvuský og nýtir nú eljusemi bóndans við uppbyggingu vöruhúsa gagna. Hann plægir í gegnum flækjur og sáir fræjum sjálfvirkni svo uppskeran verði sem best.",
+      image: "/images/bjarni.jpg",
+      icon: Tractor
     },
     {
       name: "Björn Guðmundsson",
       role: "Hugbúnaður og sjáfvirknivæðing",
       email: "bjorn@gobi.is",
       description: "Björn er svissneski nákvæmnismaðurinn okkar. Hann elskar skipulag og hreinleika í kóða jafn mikið og hann elskar gæðasúkkulaði. Hann sér til þess að hugbúnaðurinn okkar gangi eins og svissneskt úr; nákvæmur, áreiðanlegur og án hnökra.",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
+      image: "/images/bjorn.jpg",
       icon: PocketKnife
     },
     {
@@ -36,7 +36,7 @@ const AboutPage: React.FC = () => {
       role: "Framkvæmdastjóri og kaffibarista",
       email: "gj@gobi.is",
       description: "Gummi er framkvæmdastjóri og leiðtogi hópsins. Hann er margreyndur stjórnandi sem leysir flókin mál af yfirvegun, oftast með kaffibolla í hendi. Hann sér til þess að stefnan sé rétt og að teymið hafi allt til alls til að skila framúrskarandi árangri.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/guðmundur.jpg",
       icon: Crown
     }
   ];

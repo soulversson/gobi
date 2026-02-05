@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '../types';
 import { SectionId } from '../types';
 
 const Hero: React.FC = () => {

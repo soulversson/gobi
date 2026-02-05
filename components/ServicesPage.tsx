@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../types';
 import { Database, BarChart3, Code2, Container, Compass, Check } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -57,7 +57,7 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-4xl mx-auto mb-16 text-center">
             <h1 className="text-5xl font-bold text-gobi-dark mb-6">Þjónusta</h1>
             <p className="text-xl text-slate-600">
-                Ítarleg yfirferð yfir þær lausnir sem við bjóðum upp á til að styrkja stafræna innviði þína.
+                Við erum hér til að styrkja stafræna innviði og stefnur.
             </p>
         </div>
 

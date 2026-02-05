@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../types';
 import { Logo } from './Logo';
 import { Coffee } from 'lucide-react';
 
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex items-center mb-4 md:mb-0">
-             <div className="bg-white/5 rounded-lg p-2">
+             <div>
                 <Logo className="h-12 w-auto text-white" />
              </div>
           </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useLocation } from './types';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -47,25 +47,37 @@ const Home = () => {
 };
 
 function App() {
+  const { pathname } = useLocation();
+
+  let Component;
+  switch (pathname) {
+    case '/thjonusta':
+      Component = ServicesPage;
+      break;
+    case '/powerbimessa':
+      Component = PowerBiMessaPage;
+      break;
+    case '/umokkur':
+      Component = AboutPage;
+      break;
+    case '/':
+    default:
+      Component = Home;
+      break;
+  }
+
   return (
-    <HashRouter>
       <div className="flex flex-col min-h-screen bg-white">
         <ScrollToTop />
         <Navbar />
         
         <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/thjonusta" element={<ServicesPage />} />
-            <Route path="/powerbimessa" element={<PowerBiMessaPage />} />
-            <Route path="/umokkur" element={<AboutPage />} />
-          </Routes>
+          <Component />
         </main>
 
         <Footer />
         <ChatWidget />
       </div>
-    </HashRouter>
   );
 }
 

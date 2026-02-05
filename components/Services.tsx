@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code2, Database, BarChart3, Container, Users, Compass, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../types';
 import { SectionId } from '../types';
 
 const Services: React.FC = () => {
